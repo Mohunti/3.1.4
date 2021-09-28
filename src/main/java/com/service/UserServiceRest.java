@@ -42,9 +42,9 @@ public class UserServiceRest implements UserService {
     public String addUser() {
         Map<String, Object> map = new HashMap<>();
         map.put("id", 3);
-        map.put("name", "Anton");
-        map.put("lastName", "Shirshov");
-        map.put("age", 24);
+        map.put("name", "James");
+        map.put("lastName", "Brown");
+        map.put("age", 29);
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(map, headers);
         ResponseEntity<String> response = restTemplate.postForEntity(serverUrl, entity, String.class);
         return response.getBody();
@@ -53,9 +53,9 @@ public class UserServiceRest implements UserService {
     public String editUser() {
         Map<String, Object> map = new HashMap<>();
         map.put("id", 3);
-        map.put("name", "Vlad");
-        map.put("lastName", "Vladov");
-        map.put("age", 24);
+        map.put("name", "Thomas");
+        map.put("lastName", "Shelby");
+        map.put("age", 29);
 
         Map<String, String> param = new HashMap<String, String>();
         param.put("id","3");
@@ -68,9 +68,9 @@ public class UserServiceRest implements UserService {
     public String deleteUser() {
         Map<String, Object> map = new HashMap<>();
         map.put("id", 3);
-        map.put("name", "Vadim");
-        map.put("lastName", "Vadimov");
-        map.put("age", 24);
+        map.put("name", "Thomas");
+        map.put("lastName", "Shelby");
+        map.put("age", 29);
 
         Map<String, String> param = new HashMap<String, String>();
         param.put("id","3");
